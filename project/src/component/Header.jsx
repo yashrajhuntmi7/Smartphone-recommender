@@ -2,7 +2,20 @@ import React from 'react'
 
 function Header() {
   return (
-    <div>Header</div>
+    <>
+    <span>
+Smartphone Finder
+Find Your Perfect Device
+  </span>
+  <span>
+    <p>Home</p>
+    <p>Compare</p>
+    <p>About</p>
+
+  </span>
+  
+
+    </>
   )
 }
 

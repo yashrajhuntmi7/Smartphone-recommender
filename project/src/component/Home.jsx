@@ -1,8 +1,12 @@
 import React from 'react'
-
+import Card from './Card'
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+      This is Home
+      
+    </div>
+
   )
 }
 
