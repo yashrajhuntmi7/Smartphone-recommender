@@ -3,6 +3,7 @@ import Card from './Card'
 import { useState } from 'react'
 import { useEffect } from 'react';
 import Cardpop from './Cardpop'
+import Display from './Display';
 
 function Home() {
 
@@ -42,13 +43,12 @@ function Home() {
 
       <div className="text-center mb-10">
 
-        <h1 className="text-4xl font-bold">
-          Discover Your Ideal Smartphone
-        </h1>
 
-        <p className="text-gray-600 mt-2">
-          Filter by budget, use case, and brand to find the perfect match
-        </p>
+
+      <Display/>
+        
+
+        
 
       </div>
 

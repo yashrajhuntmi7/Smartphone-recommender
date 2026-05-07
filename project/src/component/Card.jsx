@@ -6,14 +6,9 @@ function Card({ phone ,setSelectedPhone}) {
 
     <div className="
       bg-white
-      
-      
-      rounded-lg
+      rounded-2xl
       shadow-md
       p-4
-      
-
-      
     ">
 
       <img
@@ -57,7 +52,7 @@ function Card({ phone ,setSelectedPhone}) {
           Battery: {phone.Battery}
         </p>
 
-        <button onClick={() => setSelectedPhone(phone)} className="mt-4 bg-black text-white px-4 py-2 rounded">View Details</button>
+        <button onClick={() => setSelectedPhone(phone)} className="mt-4 bg-black text-white px-4 py-2 rounded-2xl">View Details</button>
 
       </div>
 

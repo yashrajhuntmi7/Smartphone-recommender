@@ -16,14 +16,14 @@ function Cardpop({phone,setSelectedPhone}){
         <img
           src={phone.front_image}
           alt={phone.Name}
-          className="w-full h-60 object-cover rounded-lg"
+          className="bg-white w-full h-72 object-contain rounded-lg"
         />
 
         <h2 className="text-2xl font-bold mt-4">
           {phone.Name}
         </h2>
 
-        <h3 className="mt-2">{phone.Price}</h3>
+        <h3 className="mt-2 text-blue-600">{phone.Price}</h3>
 
         
 
@@ -67,9 +67,13 @@ function Cardpop({phone,setSelectedPhone}){
           Storage : {phone.Storage}
         </p>
 
-        <p className="mt-2">
-          Where to buy : {phone.Link}
-        </p>
+        <a
+          href={phone.Link}
+          target="_blank"
+          className="text-blue-500 block mt-4"
+        >
+          Buy Now
+        </a>
 
         
 
