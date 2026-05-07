@@ -4,9 +4,15 @@ import { useState } from 'react'
 import { useEffect } from 'react';
 import Cardpop from './Cardpop'
 import Display from './Display';
+import Footer from './Footer';
+import Sort from './Sort';
+import Filterprice from './Filterprice'
+import Filterbrand from './Filterbrand';
 
 function Home() {
-
+  const[filterbrand,setFilterBrand]=useState("all")
+  const[priceFilter,setPriceFilter]=useState("all")
+  const[sortby,setSortby]=useState("")
   const [phones, setphones] = useState([]);
   const [selectedPhone, setSelectedPhone] = useState(null);
 
@@ -37,6 +43,102 @@ function Home() {
 
   }, [])
 
+
+
+
+
+
+
+
+
+let processedPhones = [...phones];
+
+
+
+
+
+
+processedPhones = processedPhones.filter((phone) => {
+  const price = phone.PriceValue;
+
+  if (priceFilter === "under10000") return price <= 10000;
+
+  if (priceFilter === "under20000") return price > 10000 && price <= 20000;
+
+  if (priceFilter === "under30000") return price > 20000 && price <= 30000;
+
+  if (priceFilter === "under50000") return price > 30000 && price <= 50000;
+
+  if (priceFilter === "under60000") return price > 50000 && price <= 60000;
+
+  if (priceFilter === "under75000") return price > 60000 && price <= 75000;
+
+  if (priceFilter === "under100000") return price > 75000 && price <= 100000;
+
+  if (priceFilter === "above100000") return price > 100000;
+
+  return true;
+});
+
+
+
+
+processedPhones=processedPhones.filter((phones)=>{
+
+  if(filterbrand==="all"){
+    return true
+  }
+  
+  if(filterbrand==="Vivo"){
+    return phones.Company===filterbrand
+  }
+  if(filterbrand==="Realme"){
+    return phones.Company===filterbrand
+  }
+  if(filterbrand==="OnePlus"){
+    return phones.Company===filterbrand
+  }
+  if(filterbrand==="Nothing"){
+    return phones.Company===filterbrand
+  }
+  if(filterbrand==="POCO"){
+    return phones.Company===filterbrand
+  }
+  if(filterbrand==="Others"){
+    const known = ["Vivo", "Realme", "OnePlus", "Nothing", "POCO"];
+    return !known.includes(phones.Company); 
+  }
+  return true
+})
+
+
+
+
+
+
+
+
+
+if (sortby === "Performance") {
+  processedPhones.sort((a, b) => b.Performance - a.Performance);
+}
+
+if (sortby === "Camera") {
+  processedPhones.sort((a, b) => parseFloat(b.Camera) - parseFloat(a.Camera));
+}
+
+if (sortby === "Battery") {
+  processedPhones.sort((a, b) => parseInt(b.Battery) - parseInt(a.Battery));
+}
+
+
+
+
+
+
+
+
+
   return (
 
     <div className="bg-gray-100 min-h-screen p-6">
@@ -46,8 +148,28 @@ function Home() {
 
 
       <Display/>
-        
 
+
+
+      
+      <div>
+      <Filterprice
+      priceFilter={priceFilter}
+      setPriceFilter={setPriceFilter}
+      />
+
+      <Filterbrand
+      filterbrand={filterbrand}
+      setFilterBrand={setFilterBrand}
+      />
+
+      <Sort
+      sortby={sortby}
+      setSortby={setSortby}
+      />
+
+      
+      </div>
         
 
       </div>
@@ -60,7 +182,7 @@ function Home() {
         gap-6
       ">
 
-        {phones.map((phone) => (
+        {processedPhones.map((phone) => (
 
           <Card key={phone.id} phone={phone} setSelectedPhone={setSelectedPhone}/>
 
@@ -73,6 +195,7 @@ function Home() {
             <Cardpop phone={selectedPhone} setSelectedPhone={setSelectedPhone} />
           )
         }
+      <Footer/>
 
     </div>
   )

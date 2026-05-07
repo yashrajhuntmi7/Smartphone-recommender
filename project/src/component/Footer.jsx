@@ -1,25 +1,10 @@
-// import React from 'react'
-
-// function Footer() {
-//   return (
-//     <div>Footer</div>
-//   )
-// }
-
-// export default Footer
-
-
-
-
-
-
 import React from 'react'
 
 function Footer() {
 
   return (
 
-    <div className="bg-black text-white p-8 mt-10">
+    <div className="bg-black text-white p-8 mt-10 rounded-2xl">
 
       <div className="text-center">
 
