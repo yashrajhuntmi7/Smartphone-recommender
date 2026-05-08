@@ -96,7 +96,7 @@ processedPhones = processedPhones.filter((phone) => {
   return true;
 });
 processedPhones = processedPhones.sort((a, b) => {
-  return a.PriceValue - b.PriceValue;
+  return b.PriceValue - a.PriceValue;
 });
 
 
