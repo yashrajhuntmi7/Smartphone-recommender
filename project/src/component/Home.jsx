@@ -8,6 +8,7 @@ import Footer from './Footer';
 import Sort from './Sort';
 import Filterprice from './Filterprice'
 import Filterbrand from './Filterbrand';
+import Header from './Header';
 
 function Home() {
   const[filterbrand,setFilterBrand]=useState("all")
@@ -161,6 +162,7 @@ if (sortby === "Battery") {
   return (
 
     <div className="bg-gray-100 min-h-screen p-6">
+      <Header/>
 
       <div className="text-center mb-10">
 
