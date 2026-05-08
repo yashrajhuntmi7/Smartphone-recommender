@@ -1,16 +1,14 @@
+
 import React from 'react'
-import Header from './Header'
 import Footer from './Footer'
 
 const About = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
 
-      <Header />
-
       <div className="flex-1 p-6 mt-7">
 
-        <div className="max-w-4xl">
+        <div className="max-w-4xl mx-auto">
 
           <h1 className="text-5xl font-bold mb-9">
             About This Project :-
