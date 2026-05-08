@@ -263,7 +263,7 @@ if (sortby === "Battery") {
             <Cardpop phone={selectedPhone} setSelectedPhone={setSelectedPhone} />
           )
         }
-      <Footer/>
+      
 
     </div>
   )

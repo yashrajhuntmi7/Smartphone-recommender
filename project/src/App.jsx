@@ -3,6 +3,7 @@ import Header from "./component/Header";
 import About from "./component/About";
 
 import { Routes, Route } from "react-router-dom";
+import Footer from "./component/Footer";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Route path="/about" element={<About />} />
 
       </Routes>
+
+      <Footer/>
 
     </div>
   );
