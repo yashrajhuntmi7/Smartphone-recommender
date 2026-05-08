@@ -4,7 +4,7 @@ function Cardpop({phone,setSelectedPhone}){
     if (!phone) return null;
     return(
     <div className="fixed inset-0 bg-black/50 flex justify-center items-center">
-        <div className="bg-white p-6 rounded-2xl w-[400px] relative">
+        <div className="bg-white p-6 rounded-2xl relative">
 
         <button
           onClick={() => setSelectedPhone(null)}

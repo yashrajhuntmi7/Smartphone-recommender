@@ -4,11 +4,11 @@ import Footer from './Footer'
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col">
+    <div className="bg-gray-100 flex flex-col">
 
       <div className="flex-1 p-6 mt-7">
 
-        <div className="max-w-4xl mx-auto">
+        <div className="mx-auto">
 
           <h1 className="text-5xl font-bold mb-9">
             About This Project :-
@@ -29,7 +29,7 @@ const About = () => {
             Features :
           </h2>
 
-          <ul className="list-disc pl-6 space-y-2 font-semibold">
+          <ul className="pl-6 space-y-2 font-semibold">
             <li>Filter smartphones by price range</li>
             <li>Filter by brand</li>
             <li>Sort by performance, camera, and battery</li>
