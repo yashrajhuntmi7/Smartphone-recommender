@@ -12,17 +12,17 @@ function Header() {
 
         <div className="flex items-center gap-3">
 
-          <div className="text-4xl">
+          <div className="text-6xl">
             📱
           </div>
 
           <div>
 
-            <h1 className="text-2xl font-bold">
+            <h1 className="text-3xl font-bold text-black">
               Smartphone Finder
             </h1>
 
-            <p className="text-gray-500">
+            <p className="text-black font-bold">
               Find Your Perfect Device
             </p>
 
@@ -31,7 +31,7 @@ function Header() {
         </div>
 
         
-        <div className="flex gap-6">
+        <div className="flex gap-8 text-1xl  p-5">
           <p>
             Home
           </p>

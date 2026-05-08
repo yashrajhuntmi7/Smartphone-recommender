@@ -3,15 +3,16 @@ import React from "react";
 function Filterprice({ priceFilter, setPriceFilter }) {
   return (
 
-    <div >
+    <div className="flex flex-col">
 
-      <h2 >
+      <label className="font-semibold mb-2 text-left" >
         Filter By Price
-      </h2>
+      </label>
 
       <select
         value={priceFilter}
         onChange={(e) => setPriceFilter(e.target.value)}
+        className="border rounded-lg px-5 py-3 w-full border-gray-300"
       >
 
         <option value="all">

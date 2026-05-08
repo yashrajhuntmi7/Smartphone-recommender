@@ -152,7 +152,7 @@ if (sortby === "Battery") {
 
 
       
-      <div>
+      {/* <div>
       <Filterprice
       priceFilter={priceFilter}
       setPriceFilter={setPriceFilter}
@@ -169,7 +169,75 @@ if (sortby === "Battery") {
       />
 
       
-      </div>
+      </div> */}
+
+
+
+
+
+
+
+
+      <div className="
+  bg-white
+  rounded-2xl
+  shadow-md
+  p-6
+  mt-10
+  max-w-5xl
+  mx-auto
+">
+  
+  <h2 className="text-left text-2xl font-bold mb-6">
+    Filter Your Options
+  </h2>
+
+  <div className="
+    flex
+    flex-col
+    md:flex-row
+    gap-6
+    justify-between
+  ">
+
+    <div className="flex-1">
+      <Filterprice
+        priceFilter={priceFilter}
+        setPriceFilter={setPriceFilter}
+      />
+    </div>
+
+    <div className="flex-1">
+      <Filterbrand
+        filterbrand={filterbrand}
+        setFilterBrand={setFilterBrand}
+      />
+    </div>
+
+    <div className="flex-1">
+      <Sort
+        sortby={sortby}
+        setSortby={setSortby}
+      />
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
 
       </div>

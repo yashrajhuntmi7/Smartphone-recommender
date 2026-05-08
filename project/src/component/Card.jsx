@@ -52,7 +52,7 @@ function Card({ phone ,setSelectedPhone}) {
           Battery: {phone.Battery}
         </p>
 
-        <button onClick={() => setSelectedPhone(phone)} className="mt-4 bg-black text-white px-4 py-2 rounded-2xl">View Details</button>
+        <button onClick={() => setSelectedPhone(phone)} className="mt-4 bg-black text-white px-4 py-2 rounded-4xl">View Details</button>
 
       </div>
 

@@ -8,15 +8,15 @@ function Footer() {
 
       <div className="text-center">
 
-        <h2 className="text-2xl font-bold">
+        <h2 className="text-3xl font-bold text-white">
           Smartphone Finder
         </h2>
 
-        <p className="text-gray-400 mt-3">
+        <p className="text-white mt-3 ">
           Find the best smartphones easily.
         </p>
 
-        <p className="mt-5 text-sm text-gray-500">
+        <p className="mt-5 text-sm text-white">
           © 2026 Smartphone Finder
         </p>
 

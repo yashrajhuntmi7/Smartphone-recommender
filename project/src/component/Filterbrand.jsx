@@ -2,16 +2,17 @@ import React from 'react'
 
 const Filterbrand = ({filterbrand,setFilterBrand}) => {
   return (
-    <div>
-        <h2>Filter By Brand</h2>
+     <div className="flex flex-col text-left">
+        <label className="font-semibold mb-2">Filter By Brand</label>
         <select
-        value={filterbrand}
-        onChange={(e)=>setFilterBrand(e.target.value)}
+          value={filterbrand}
+          onChange={(e) => setFilterBrand(e.target.value)}
+          className="border rounded-lg px-5 py-3 w-full border-gray-300"
         >
-            <option value=""
-            >
-                All Brand
-            </option>
+          <option value="">
+            All Brand
+          </option>
+            
 
             <option value="Vivo">
                 Vivo
