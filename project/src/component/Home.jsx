@@ -61,23 +61,42 @@ let processedPhones = [...phones];
 processedPhones = processedPhones.filter((phone) => {
   const price = phone.PriceValue;
 
-  if (priceFilter === "under10000") return price <= 10000;
+  if (priceFilter === "under10000"){
+    return price <= 10000
+  }
 
-  if (priceFilter === "under20000") return price > 10000 && price <= 20000;
+  if (priceFilter === "under20000") {
+    return price <= 20000
+  }
 
-  if (priceFilter === "under30000") return price > 20000 && price <= 30000;
+  if (priceFilter === "under30000") {
+    return price <= 30000
+  }
 
-  if (priceFilter === "under50000") return price > 30000 && price <= 50000;
+  if (priceFilter === "under50000") {
+    return price <= 50000
+  }
 
-  if (priceFilter === "under60000") return price > 50000 && price <= 60000;
+  if (priceFilter === "under60000") {
+    return price <= 60000
+  }
 
-  if (priceFilter === "under75000") return price > 60000 && price <= 75000;
+  if (priceFilter === "under75000") {
+    return price <= 75000
+  }
 
-  if (priceFilter === "under100000") return price > 75000 && price <= 100000;
+  if (priceFilter === "under100000") {
+    return price <= 100000
+  }
 
-  if (priceFilter === "above100000") return price > 100000;
+  if (priceFilter === "above100000") {
+    return price > 100000
+  }
 
   return true;
+});
+processedPhones = processedPhones.sort((a, b) => {
+  return a.PriceValue - b.PriceValue;
 });
 
 
@@ -151,25 +170,6 @@ if (sortby === "Battery") {
 
 
 
-      
-      {/* <div>
-      <Filterprice
-      priceFilter={priceFilter}
-      setPriceFilter={setPriceFilter}
-      />
-
-      <Filterbrand
-      filterbrand={filterbrand}
-      setFilterBrand={setFilterBrand}
-      />
-
-      <Sort
-      sortby={sortby}
-      setSortby={setSortby}
-      />
-
-      
-      </div> */}
 
 
 
@@ -179,14 +179,14 @@ if (sortby === "Battery") {
 
 
       <div className="
-  bg-white
-  rounded-2xl
-  shadow-md
-  p-6
-  mt-10
-  max-w-5xl
-  mx-auto
-">
+        bg-white
+        rounded-2xl
+        shadow-md
+        p-6
+        mt-10
+        max-w-5xl
+        mx-auto
+      ">
   
   <h2 className="text-left text-2xl font-bold mb-6">
     Filter Your Options
